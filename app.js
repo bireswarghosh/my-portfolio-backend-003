@@ -1,9 +1,17 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-// import cors from 'cors';
+import cors from 'cors';
 
 // import path from "path";
 export const app = express();
+
+app.use(
+  cors({
+    exposedHeaders: ["X-Total-Count"],
+  })
+);
+
+
 
 // app.use(cors({
 //     origin: 'http://localhost:3001',
